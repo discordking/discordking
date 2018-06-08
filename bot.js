@@ -10,6 +10,8 @@
         const dbl = new DBL(process.env.DBL_TOKEN, bot);
 
 	bot.on('ready', () => {
+	console.log("Loading...");
+	})
 
 	fs.readdir("./commands/", (err, files) => {
 	if(err) console.log(err);
