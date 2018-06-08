@@ -10,26 +10,6 @@
         const dbl = new DBL(process.env.DBL_TOKEN, bot);
 
 	bot.on('ready', () => {
-	console.log("Loading...");
-	setTimeout(function(){
-	console.log("Bot has been loaded completely.");
-	}, 1000);
-	function botStatus() {
-        let status = [
-            `My Default Prefix ${botconfig.prefix}.`,
-            `in ${bot.guilds.size} guilds.`,
-            `Di anuin verter :*.`,
-            `with my dev VerterDEV`,
-            `with ${bot.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()} users.`
-        ];
-        let rstatus = Math.floor(Math.random() * status.length);
-
-        bot.user.setActivity(status[rstatus], {Type: 'STREAMING'});        // BOT STATUS
-      }; setInterval(botStatus, 20000)
-        setInterval(() => {
-        dbl.postStats(bot.guilds.size)
-        }, 1800000);
-	})
 
 	fs.readdir("./commands/", (err, files) => {
     console.log(`Loaded ${files.length} commands.`)
