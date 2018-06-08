@@ -19,7 +19,7 @@
             `My Default Prefix ${botconfig.prefix}.`,
             `in ${bot.guilds.size} guilds.`,
             `Di anuin verter :*.`,
-            `with my dev Tritax#2924`,
+            `with my dev VerterDEV`,
             `with ${bot.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()} users.`
         ];
         let rstatus = Math.floor(Math.random() * status.length);
