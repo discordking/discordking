@@ -12,7 +12,6 @@
 	bot.on('ready', () => {
 
 	fs.readdir("./commands/", (err, files) => {
-    console.log(`Loaded ${files.length} commands.`)
 	if(err) console.log(err);
 	let jsfile = files.filter(f => f.split(".").pop() === "js");
 	if(jsfile.length <= 0){
@@ -25,6 +24,7 @@
 	let props = require(`./commands/${f}`);
 	console.log(`${f} loaded!`);
 	bot.commands.set(props.help.name, props);
+	});
 	});
 
 	bot.on("message", async message => {
