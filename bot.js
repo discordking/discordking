@@ -18,7 +18,7 @@
         let status = [
             `My Default Prefix ${botconfig.prefix}.`,
             `in ${bot.guilds.size} guilds.`,
-            `in ACH.`,
+            `Di anuin verter :*.`,
             `with my dev Tritax#2924`,
             `with ${bot.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()} users.`
         ];
@@ -130,11 +130,11 @@
 
 	});
 	bot.on('guildMemberAdd', member => {
-    bot.channels.get('439792255365021696').setName(`Total Users: ${member.guild.memberCount}`)
+    bot.channels.get('454775818825236488').setName(`Total Users: ${member.guild.memberCount}`)
     let humans = member.guild.members.filter(m => !m.user.bot).size;
-    bot.channels.get('439793088001736725').setName(`Member Count: ${humans}`)
+    bot.channels.get('454775914069491722').setName(`Member Count: ${humans}`)
     let bots = member.guild.members.filter(m => m.user.bot).size;
-    bot.channels.get('439793716052623361').setName(`Bot Count: ${bots}`)
+    bot.channels.get('454775966221336596').setName(`Bot Count: ${bots}`)
 	const members = member.guild.memberCount;
 	const channel = member.guild.channels.find('name', 'member-log');
 	if (!channel) return;
@@ -155,11 +155,11 @@
 	channel.send(Embed);
 	});
 	bot.on('guildMemberRemove', member => {
-    bot.channels.get('439792255365021696').setName(`Total Users: ${member.guild.memberCount}`)
+    bot.channels.get('454775818825236488').setName(`Total Users: ${member.guild.memberCount}`)
     let humans = member.guild.members.filter(m => !m.user.bot).size;
-    bot.channels.get('439793088001736725').setName(`Member Count: ${humans}`)
+    bot.channels.get('454775914069491722').setName(`Member Count: ${humans}`)
     let bots = member.guild.members.filter(m => m.user.bot).size;
-    bot.channels.get('439793716052623361').setName(`Bot Count: ${bots}`)
+    bot.channels.get('454775966221336596').setName(`Bot Count: ${bots}`)
 	const channel = member.guild.channels.find(`name`, 'member-log');
 	if(!channel) return; 
 	let Embed = new Discord.RichEmbed()
