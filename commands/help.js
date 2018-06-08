@@ -7,7 +7,6 @@ module.exports.run = async (bot, message, args) => {
     .addField("Moderation", "`" + message.prefix + "mod`", true)
     .addField("Games", "`" + message.prefix + "games`", true)
     .addField("Anime", "`" + message.prefix + "animecmds`", true)
-    .addField("Music", "`" + message.prefix + "music`", true)
     .addField("NSFW", "`" + message.prefix + "nsfw`", true)
     .addField("Core", "`" + message.prefix + "core`", true)
     .addField("Utils", "`" + message.prefix + "utils`", true)
