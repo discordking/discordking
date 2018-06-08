@@ -26,7 +26,6 @@
 	console.log(`${f} loaded!`);
 	bot.commands.set(props.help.name, props);
 	});
-	});
 
 	bot.on("message", async message => {
       let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
