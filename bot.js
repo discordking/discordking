@@ -9,6 +9,7 @@
         const DBL = require("dblapi.js");
         const dbl = new DBL(process.env.DBL_TOKEN, bot);
 
+
 	bot.on('ready', () => {
 	console.log("Loading...");
 	setTimeout(function(){
