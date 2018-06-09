@@ -11,9 +11,28 @@
 
 	bot.on('ready', () => {
 	console.log("Loading...");
+	setTimeout(function(){
+	console.log("Bot has been loaded completely.");
+	}, 1000);
+	function botStatus() {
+        let status = [
+            `Verter lagi oprasi aku :"D.`,
+            `Aku lagi di anuin Verter >:V.`,
+            `Susah punya owner ganteng :D.`,
+            `Si verter terlalu ganteng :V`,
+            `Verter jangan bunuh aku.`
+        ];
+        let rstatus = Math.floor(Math.random() * status.length);
+
+        bot.user.setActivity(status[rstatus], {Type: 'STREAMING'});        // BOT STATUS
+      }; setInterval(botStatus, 20000)
+        setInterval(() => {
+        dbl.postStats(bot.guilds.size)
+        }, 1800000);
 	})
 
 	fs.readdir("./commands/", (err, files) => {
+    console.log(`Loaded ${files.length} commands.`)
 	if(err) console.log(err);
 	let jsfile = files.filter(f => f.split(".").pop() === "js");
 	if(jsfile.length <= 0){
