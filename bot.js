@@ -131,11 +131,11 @@
 
 	});
 	bot.on('guildMemberAdd', member => {
-    bot.channels.get('454775818825236488').setName(`Total Users》 ${member.guild.memberCount}`)
+    bot.channels.get('454775818825236488').setName(`Total Users 〉 ${member.guild.memberCount}`)
     let humans = member.guild.members.filter(m => !m.user.bot).size;
-    bot.channels.get('454775914069491722').setName(`Human》 ${humans}`)
+    bot.channels.get('454775914069491722').setName(`Human 〉 ${humans}`)
     let bots = member.guild.members.filter(m => m.user.bot).size;
-    bot.channels.get('454775966221336596').setName(`Robot》 ${bots}`)
+    bot.channels.get('454775966221336596').setName(`Robot 〉 ${bots}`)
 	const members = member.guild.memberCount;
 	const channel = member.guild.channels.find('name', 'member-log');
 	if (!channel) return;
@@ -156,11 +156,11 @@
 	channel.send(Embed);
 	});
 	bot.on('guildMemberRemove', member => {
-    bot.channels.get('454775818825236488').setName(`Total Users》 ${member.guild.memberCount}`)
+    bot.channels.get('454775818825236488').setName(`Total Users 〉 ${member.guild.memberCount}`)
     let humans = member.guild.members.filter(m => !m.user.bot).size;
-    bot.channels.get('454775914069491722').setName(`Human》 ${humans}`)
+    bot.channels.get('454775914069491722').setName(`Human 〉 ${humans}`)
     let bots = member.guild.members.filter(m => m.user.bot).size;
-    bot.channels.get('454775966221336596').setName(`Robot》 ${bots}`)
+    bot.channels.get('454775966221336596').setName(`Robot 〉 ${bots}`)
 	const channel = member.guild.channels.find(`name`, 'member-log');
 	if(!channel) return; 
 	let Embed = new Discord.RichEmbed()
